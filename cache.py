@@ -12,4 +12,3 @@ def get_cached_response(url: str) -> bytes | None:
 
 def set_cached_response(url: str, content: bytes, ttl: int = 60) -> None:
     r.setex(cache_key(url), ttl, content)
-
